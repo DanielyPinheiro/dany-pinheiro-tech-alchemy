@@ -1,5 +1,6 @@
 import { Compass } from "lucide-react";
 import { SectionHeading } from "./Solucoes";
+import { Reveal } from "./Reveal";
 
 export function Sobre() {
   return (
