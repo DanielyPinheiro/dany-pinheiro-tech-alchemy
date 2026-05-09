@@ -50,7 +50,7 @@ export function Hero() {
               Falar Comigo
             </a>
           </div>
-        </div>
+        </motion.div>
 
         <div className="relative mx-auto aspect-square w-[min(440px,90%)]">
           <div
