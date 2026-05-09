@@ -1,3 +1,5 @@
+import { Particles } from "./Particles";
+
 export function GlowBackground() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -19,6 +21,7 @@ export function GlowBackground() {
           animationDelay: "-12s",
         }}
       />
+      <Particles count={26} />
     </div>
   );
 }
