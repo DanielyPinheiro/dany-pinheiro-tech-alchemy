@@ -105,10 +105,33 @@
   --shadow-glass: 0 10px 40px -12px oklch(0 0 0 / 0.5);
 }
 
-.dark {
-  /* Same palette in dark — site is dark-only */
-  --background: oklch(0.17 0.025 290);
-  --foreground: oklch(0.97 0.01 300);
+.light {
+  --background: oklch(0.985 0.005 300);
+  --surface: oklch(0.97 0.012 300);
+  --surface-2: oklch(0.94 0.02 305);
+  --foreground: oklch(0.22 0.04 290);
+  --muted: oklch(0.92 0.02 300);
+  --muted-foreground: oklch(0.45 0.03 290);
+  --card: oklch(0.98 0.008 300);
+  --card-foreground: oklch(0.22 0.04 290);
+  --popover: oklch(0.98 0.008 300);
+  --popover-foreground: oklch(0.22 0.04 290);
+  --primary: oklch(0.62 0.22 305);
+  --primary-foreground: oklch(0.98 0.01 300);
+  --secondary: oklch(0.93 0.025 305);
+  --secondary-foreground: oklch(0.22 0.04 290);
+  --accent: oklch(0.93 0.025 305);
+  --accent-foreground: oklch(0.22 0.04 290);
+  --gold: oklch(0.72 0.15 75);
+  --pink: oklch(0.65 0.20 350);
+  --border: oklch(0 0 0 / 8%);
+  --input: oklch(0 0 0 / 10%);
+  --ring: oklch(0.62 0.22 305);
+
+  --shadow-glow-purple: 0 0 60px -10px color-mix(in oklab, var(--primary) 25%, transparent);
+  --shadow-glow-gold: 0 0 80px -20px color-mix(in oklab, var(--gold) 30%, transparent);
+  --shadow-glow-pink: 0 0 50px -12px color-mix(in oklab, var(--pink) 30%, transparent);
+  --shadow-glass: 0 10px 40px -16px oklch(0 0 0 / 0.15);
 }
 
 @layer base {

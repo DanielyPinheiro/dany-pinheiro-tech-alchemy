@@ -31,7 +31,7 @@ export function Contato() {
                 boxShadow: "var(--shadow-glow-pink)",
               }}
             >
-              <Mail className="h-4 w-4" /> contato@danypinheiro.com
+              <Mail className="h-4 w-4" /><span>contato@danypinheiro.com</span>
             </a>
             <a
               href="https://linkedin.com"
@@ -39,7 +39,7 @@ export function Contato() {
               rel="noreferrer"
               className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
             >
-              <Linkedin className="h-4 w-4 text-gold" /> LinkedIn
+              <Linkedin className="h-4 w-4 text-gold" /><span>LinkedIn</span>
             </a>
           </div>
         </div>
