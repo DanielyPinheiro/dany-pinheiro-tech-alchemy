@@ -1,4 +1,5 @@
 import { BarChart3, Cog, ShieldCheck, Code2 } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const items = [
   {
@@ -27,30 +28,33 @@ export function Solucoes() {
   return (
     <section id="solucoes" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Soluções" title="Inteligência aplicada ao seu negócio" />
+        <Reveal>
+          <SectionHeading eyebrow="Soluções" title="Inteligência aplicada ao seu negócio" />
+        </Reveal>
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
-          {items.map(({ icon: Icon, title, desc }) => (
-            <article
-              key={title}
-              className="glass group relative overflow-hidden rounded-2xl p-6 transition hover:-translate-y-1"
-              style={{ boxShadow: "var(--shadow-glass)" }}
-            >
-              <div
-                className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full opacity-0 blur-3xl transition group-hover:opacity-60"
-                style={{ background: "radial-gradient(circle, var(--primary), transparent 60%)" }}
-              />
-              <div
-                className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
-                style={{
-                  background: "color-mix(in oklab, var(--gold) 15%, transparent)",
-                  boxShadow: "var(--shadow-glow-gold)",
-                }}
+          {items.map(({ icon: Icon, title, desc }, i) => (
+            <Reveal key={title} delay={i * 0.08}>
+              <article
+                className="glass group relative h-full overflow-hidden rounded-2xl p-6 transition hover:-translate-y-1"
+                style={{ boxShadow: "var(--shadow-glass)" }}
               >
-                <Icon className="h-6 w-6 text-gold" />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-            </article>
+                <div
+                  className="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full opacity-0 blur-3xl transition group-hover:opacity-60"
+                  style={{ background: "radial-gradient(circle, var(--primary), transparent 60%)" }}
+                />
+                <div
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                  style={{
+                    background: "color-mix(in oklab, var(--gold) 15%, transparent)",
+                    boxShadow: "var(--shadow-glow-gold)",
+                  }}
+                >
+                  <Icon className="h-6 w-6 text-gold" strokeWidth={1.75} />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

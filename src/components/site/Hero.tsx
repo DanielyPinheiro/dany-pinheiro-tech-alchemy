@@ -1,11 +1,17 @@
+"use client";
 import { Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 import { OwlMark } from "./OwlMark";
 
 export function Hero() {
   return (
     <section id="top" className="relative pt-36 pb-20 sm:pt-44 sm:pb-28">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.1fr_1fr] lg:items-center">
-        <div className="animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="glass inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium text-muted-foreground">
             <Sparkles className="h-3.5 w-3.5 text-gold" />
             Dani Pinheiro • Tech Alquimia
