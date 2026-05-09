@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./Solucoes";
+import { Reveal } from "./Reveal";
 
 const projects = [
   {

@@ -1,4 +1,5 @@
 import { SectionHeading } from "./Solucoes";
+import { Reveal } from "./Reveal";
 
 const stack = ["Next.js", "TypeScript", "Tailwind CSS", "Power BI", "Excel VBA"];
 
