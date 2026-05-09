@@ -1,4 +1,5 @@
 import { OwlMark } from "./OwlMark";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
@@ -30,13 +31,16 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contato"
-          className="rounded-full px-4 py-1.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-          style={{ background: "var(--gradient-pink-purple)", boxShadow: "var(--shadow-glow-pink)" }}
-        >
-          Vamos falar
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#contato"
+            className="rounded-full px-4 py-1.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+            style={{ background: "var(--gradient-pink-purple)", boxShadow: "var(--shadow-glow-pink)" }}
+          >
+            Vamos falar
+          </a>
+        </div>
       </nav>
     </header>
   );

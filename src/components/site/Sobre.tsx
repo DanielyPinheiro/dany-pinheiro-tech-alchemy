@@ -1,14 +1,18 @@
 import { Compass } from "lucide-react";
 import { SectionHeading } from "./Solucoes";
+import { Reveal } from "./Reveal";
 
 export function Sobre() {
   return (
     <section id="sobre" className="relative py-24">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-        <div>
+        <Reveal>
           <SectionHeading eyebrow="Sobre" title="Na interseção entre dados, tecnologia e estratégia." />
-          <div className="mt-6 inline-flex h-12 w-12 items-center justify-center rounded-xl glass">
-            <Compass className="h-6 w-6 text-gold" />
+          <div
+            className="mt-6 inline-flex h-12 w-12 items-center justify-center rounded-xl glass"
+            style={{ boxShadow: "var(--shadow-glow-gold)" }}
+          >
+            <Compass className="h-6 w-6 text-gold" strokeWidth={1.75} />
           </div>
           <p className="mt-6 text-base text-muted-foreground sm:text-lg">
             Sou Dani Pinheiro — analista de dados, consultora e desenvolvedora full-stack.
@@ -20,20 +24,22 @@ export function Sobre() {
             Minha prática combina controles internos sólidos, dashboards executivos e produtos
             digitais sob medida — sempre com foco em significado, não apenas em métricas.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="glass relative rounded-3xl p-10 sm:p-14">
-          <div
-            className="pointer-events-none absolute inset-0 rounded-3xl opacity-40"
-            style={{ background: "var(--gradient-hero)" }}
-          />
-          <p className="relative text-2xl font-semibold leading-tight sm:text-4xl">
-            Dados contam histórias.
-            <br />
-            <span className="text-gold-gradient">Eu dou significado.</span>
-          </p>
-          <p className="relative mt-4 text-sm text-muted-foreground">— assinatura Tech Alquimia</p>
-        </div>
+        <Reveal delay={0.15}>
+          <div className="glass relative rounded-3xl p-10 sm:p-14">
+            <div
+              className="pointer-events-none absolute inset-0 rounded-3xl opacity-40"
+              style={{ background: "var(--gradient-hero)" }}
+            />
+            <p className="relative text-2xl font-semibold leading-tight sm:text-4xl">
+              Dados contam histórias.
+              <br />
+              <span className="text-gold-gradient">Eu dou significado.</span>
+            </p>
+            <p className="relative mt-4 text-sm text-muted-foreground">— assinatura Tech Alquimia</p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
